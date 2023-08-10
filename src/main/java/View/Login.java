@@ -41,40 +41,40 @@ public class Login extends javax.swing.JFrame {
         Login.setFont(new java.awt.Font("Sitka Text", 0, 36)); // NOI18N
         Login.setForeground(new java.awt.Color(255, 255, 255));
         Login.setText("Login");
-        getContentPane().add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, -1, -1));
+        getContentPane().add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, -1, -1));
 
         Usuario.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
         Usuario.setForeground(new java.awt.Color(255, 255, 255));
         Usuario.setText("Usuário");
-        getContentPane().add(Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, -1, -1));
+        getContentPane().add(Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, -1, -1));
 
         Senha.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
         Senha.setForeground(new java.awt.Color(255, 255, 255));
         Senha.setText("Senha");
-        getContentPane().add(Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, -1, -1));
+        getContentPane().add(Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, -1, -1));
 
         btnEntrar.setText("Entrar");
-        getContentPane().add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, -1, -1));
+        getContentPane().add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, -1, -1));
 
         txtUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtUserActionPerformed(evt);
             }
         });
-        getContentPane().add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 180, 30));
+        getContentPane().add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 180, 30));
 
         txtPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPasswordActionPerformed(evt);
             }
         });
-        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 180, 30));
+        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 320, 180, 30));
 
-        lblPainel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/painel-login.png"))); // NOI18N
-        getContentPane().add(lblPainel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 400, 380));
+        lblPainel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Agenda-PainelFundo.png"))); // NOI18N
+        getContentPane().add(lblPainel, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 30, 400, 380));
 
         lblBackgroud.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/logo 2.png"))); // NOI18N
-        getContentPane().add(lblBackgroud, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -120, 460, 710));
+        getContentPane().add(lblBackgroud, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -120, -1, 650));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
