@@ -54,8 +54,6 @@ public class Agenda extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtBoxId.setBackground(new java.awt.Color(255, 255, 255));
-        txtBoxId.setForeground(new java.awt.Color(0, 0, 0));
         txtBoxId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtBoxIdActionPerformed(evt);
@@ -88,33 +86,20 @@ public class Agenda extends javax.swing.JFrame {
         getContentPane().add(lblHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
 
         ComboBoxCliente.setBackground(new java.awt.Color(255, 255, 255));
-        ComboBoxCliente.setForeground(new java.awt.Color(0, 0, 0));
         ComboBoxCliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(ComboBoxCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 270, -1));
 
         ComboBoxService.setBackground(new java.awt.Color(255, 255, 255));
-        ComboBoxService.setForeground(new java.awt.Color(0, 0, 0));
         ComboBoxService.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(ComboBoxService, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 270, -1));
-
-        txtValor.setBackground(new java.awt.Color(255, 255, 255));
-        txtValor.setForeground(new java.awt.Color(0, 0, 0));
         getContentPane().add(txtValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 270, -1));
-
-        txtData.setBackground(new java.awt.Color(255, 255, 255));
-        txtData.setForeground(new java.awt.Color(0, 0, 0));
         getContentPane().add(txtData, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 270, -1));
-
-        txtHora.setBackground(new java.awt.Color(255, 255, 255));
-        txtHora.setForeground(new java.awt.Color(0, 0, 0));
         getContentPane().add(txtHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 270, -1));
 
         ScrollObs.setBackground(new java.awt.Color(255, 255, 255));
-        ScrollObs.setForeground(new java.awt.Color(0, 0, 0));
 
         txtObs.setBackground(new java.awt.Color(255, 255, 255));
         txtObs.setColumns(20);
-        txtObs.setForeground(new java.awt.Color(0, 0, 0));
         txtObs.setRows(5);
         ScrollObs.setViewportView(txtObs);
 
@@ -126,11 +111,10 @@ public class Agenda extends javax.swing.JFrame {
         btnAgendar.setText("Agendar");
         getContentPane().add(btnAgendar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 360, -1));
 
-        jTable1.setBackground(new java.awt.Color(255, 255, 255));
         jTable1.setForeground(new java.awt.Color(0, 0, 0));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, "Alan", "Barba", "25", "13/08/2023", "10:20", "Degrade"},
+                {"1313", "Alan", "Barba", "25", "13/08/2023", "10:20", "Degrade"},
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null}

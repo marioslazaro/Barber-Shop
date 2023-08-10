@@ -29,6 +29,7 @@ public class Login extends javax.swing.JFrame {
         Login = new javax.swing.JLabel();
         Usuario = new javax.swing.JLabel();
         Senha = new javax.swing.JLabel();
+        btnEntrar = new javax.swing.JToggleButton();
         txtUser = new javax.swing.JTextField();
         txtPassword = new javax.swing.JPasswordField();
         lblPainel = new javax.swing.JLabel();
@@ -52,8 +53,9 @@ public class Login extends javax.swing.JFrame {
         Senha.setText("Senha");
         getContentPane().add(Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, -1, -1));
 
-        txtUser.setBackground(new java.awt.Color(255, 255, 255));
-        txtUser.setForeground(new java.awt.Color(0, 0, 0));
+        btnEntrar.setText("Entrar");
+        getContentPane().add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, -1, -1));
+
         txtUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtUserActionPerformed(evt);
@@ -61,9 +63,6 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 180, 30));
 
-        txtPassword.setBackground(new java.awt.Color(255, 255, 255));
-        txtPassword.setForeground(new java.awt.Color(0, 0, 0));
-        txtPassword.setText("jPasswordField1");
         txtPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPasswordActionPerformed(evt);
@@ -127,6 +126,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel Login;
     private javax.swing.JLabel Senha;
     private javax.swing.JLabel Usuario;
+    private javax.swing.JToggleButton btnEntrar;
     private javax.swing.JLabel lblBackgroud;
     private javax.swing.JLabel lblPainel;
     private javax.swing.JPasswordField txtPassword;

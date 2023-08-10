@@ -42,7 +42,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabelBackGroud.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/fundo menu principal.png"))); // NOI18N
 
         jMenuCadastro.setBackground(new java.awt.Color(255, 255, 255));
-        jMenuCadastro.setForeground(new java.awt.Color(255, 255, 255));
+        jMenuCadastro.setForeground(new java.awt.Color(0, 0, 0));
         jMenuCadastro.setText("Cadastro");
 
         jMenuItem1.setBackground(new java.awt.Color(255, 255, 255));
