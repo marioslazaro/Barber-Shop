@@ -4,17 +4,27 @@
  */
 package View;
 
+import Controller.AgendaController;
+import Model.DAO.Banco;
+import javax.swing.JTable;
+
 /**
  *
  * @author xbaco
  */
 public class Agenda extends javax.swing.JFrame {
+    
+    private final AgendaController controller; 
 
     /**
      * Creates new form Agenda
      */
     public Agenda() {
         initComponents();
+        this.controller = new AgendaController(this);
+        Banco.inicia();
+        iniciar();
+        
     }
 
     /**
@@ -43,7 +53,7 @@ public class Agenda extends javax.swing.JFrame {
         txtObs = new javax.swing.JTextArea();
         btnAgendar = new javax.swing.JToggleButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tableAgendamentos = new javax.swing.JTable();
         lblObs = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         lblBackGround = new javax.swing.JLabel();
@@ -51,7 +61,12 @@ public class Agenda extends javax.swing.JFrame {
 
         jLabel3.setText("jLabel3");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        addWindowStateListener(new java.awt.event.WindowStateListener() {
+            public void windowStateChanged(java.awt.event.WindowEvent evt) {
+                formWindowStateChanged(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtBoxId.addActionListener(new java.awt.event.ActionListener() {
@@ -111,10 +126,9 @@ public class Agenda extends javax.swing.JFrame {
         btnAgendar.setText("Agendar");
         getContentPane().add(btnAgendar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 360, -1));
 
-        jTable1.setForeground(new java.awt.Color(0, 0, 0));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tableAgendamentos.setForeground(new java.awt.Color(0, 0, 0));
+        tableAgendamentos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"1313", "Alan", "Barba", "25", "13/08/2023", "10:20", "Degrade"},
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null}
@@ -123,7 +137,7 @@ public class Agenda extends javax.swing.JFrame {
                 "ID", "Cliente", "Serviço", "Valor", "Data", "Hora", "Observação"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tableAgendamentos);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 780, 150));
 
@@ -148,6 +162,10 @@ public class Agenda extends javax.swing.JFrame {
     private void txtBoxIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBoxIdActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtBoxIdActionPerformed
+
+    private void formWindowStateChanged(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowStateChanged
 
     /**
      * @param args the command line arguments
@@ -193,7 +211,6 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JLabel lblBackGround;
     private javax.swing.JLabel lblCliente;
     private javax.swing.JLabel lblData;
@@ -202,10 +219,26 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JLabel lblObs;
     private javax.swing.JLabel lblService;
     private javax.swing.JLabel lblValor;
+    private javax.swing.JTable tableAgendamentos;
     private javax.swing.JTextField txtBoxId;
     private javax.swing.JTextField txtData;
     private javax.swing.JTextField txtHora;
     private javax.swing.JTextArea txtObs;
     private javax.swing.JTextField txtValor;
     // End of variables declaration//GEN-END:variables
+
+    private void iniciar() {
+        this.controller.atualizaTabela();
+        
+    }
+
+    public JTable getTableAgendamentos() {
+        return tableAgendamentos;
+    }
+
+    public void setTableAgendamentos(JTable tableAgendamentos) {
+        this.tableAgendamentos = tableAgendamentos;
+    }
+    
+    
 }

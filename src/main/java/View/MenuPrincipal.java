@@ -42,7 +42,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuRelatorio = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabelBackGroud.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/fundo menu principal.png"))); // NOI18N
 

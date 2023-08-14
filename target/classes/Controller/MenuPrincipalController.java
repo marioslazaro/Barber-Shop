@@ -22,7 +22,7 @@ public class MenuPrincipalController {
     public void navegarParaAgenda(){
         Agenda agenda = new Agenda();
         agenda.setVisible(true); 
-        this.view.dispose();
+       
         
     }
 }

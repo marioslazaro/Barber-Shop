@@ -1,6 +1,7 @@
 View\Login$1.class
 View\Login.class
 View\Main.class
+View\Agenda$3.class
 View\Agenda.class
 View\MenuPrincipal$2.class
 View\Login$2.class
@@ -10,6 +11,8 @@ Model\DAO\UsuarioDAO.class
 Model\Pessoa.class
 View\Agenda$2.class
 Model\DAO\ServicoDAO.class
+Controller\AgendaController.class
+Controller\Helper\AgendaHelper.class
 Model\Cliente.class
 Model\DAO\AgendamentoDAO.class
 Model\DAO\Banco.class
