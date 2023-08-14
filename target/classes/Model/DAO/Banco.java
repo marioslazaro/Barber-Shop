@@ -47,12 +47,15 @@ public class Banco {
         Cliente cliente9 = new Cliente(9, "Samuel Coltinho", 'M', "09/02/1998", "302121189", "samuelcoltinhopet@gmail.com", "74595142487", "Rua floresta 12 Canudos NH",  "9330046364");
         Cliente cliente10 = new Cliente(10, "Felipe Luis", 'M', "12/06/1999", "3021212478", "felipeluispet@gmail.com", "845713647", "Rua marechal 1023 Canudos NH",  "933000874");
         
-        Servico servico1 = new Servico(1, "Corte Simples", 18);
+        Servico servico1 = new Servico(1, "Corte Simples", 20);
         Servico servico2 = new Servico(2, "Corte Degrade", 30);
         Servico servico3 = new Servico(3, "Barba Simples", 15);
-        Servico servico4 = new Servico(4, "Barba Desenhada", 25);
+        Servico servico4 = new Servico(4, "Barba Degrade", 25);
         Servico servico5 = new Servico(5, "Sombrancelhas", 10);
         Servico servico6 = new Servico(6, "Penteados", 3);
+        Servico servico7 = new Servico(7, "Combo Simples", 30);
+        Servico servico8 = new Servico(8, "Combo Degrade", 50);
+        Servico servico9 = new Servico(9, "Combo Master", 60);
 
         Agendamento agendamento1 = new Agendamento(1, cliente1, servico2, 30, "14/08/2023 09:30");
         Agendamento agendamento2 = new Agendamento(2, cliente3, servico4, 40, "14/08/2023 10:00");
@@ -79,6 +82,9 @@ public class Banco {
         servico.add(servico4);
         servico.add(servico5);
         servico.add(servico6);
+        servico.add(servico7);
+        servico.add(servico8);
+        servico.add(servico9);
         
         agendamento.add(agendamento1);
         agendamento.add(agendamento2);

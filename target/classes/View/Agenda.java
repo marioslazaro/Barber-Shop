@@ -8,6 +8,7 @@ import Controller.AgendaController;
 import Model.DAO.Banco;
 import javax.swing.JComboBox;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 
 /**
  *
@@ -105,6 +106,11 @@ public class Agenda extends javax.swing.JFrame {
         getContentPane().add(JComboBoxCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 270, -1));
 
         JComboBoxServico.setBackground(new java.awt.Color(255, 255, 255));
+        JComboBoxServico.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                JComboBoxServicoItemStateChanged(evt);
+            }
+        });
         getContentPane().add(JComboBoxServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 270, -1));
         getContentPane().add(txtValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 270, -1));
         getContentPane().add(txtData, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 270, -1));
@@ -165,6 +171,10 @@ public class Agenda extends javax.swing.JFrame {
     private void formWindowStateChanged(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowStateChanged
         // TODO add your handling code here:
     }//GEN-LAST:event_formWindowStateChanged
+
+    private void JComboBoxServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_JComboBoxServicoItemStateChanged
+        this.controller.atualizaValor();
+    }//GEN-LAST:event_JComboBoxServicoItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -230,6 +240,8 @@ public class Agenda extends javax.swing.JFrame {
         this.controller.atualizaTabela();
         this.controller.atualizaCliente();
         this.controller.atualizaServico();
+        this.controller.atualizaValor();
+        
         
     }
 
@@ -256,4 +268,13 @@ public class Agenda extends javax.swing.JFrame {
     public void setjComboBoxServico(JComboBox<String> jComboBoxServico) {
         this.JComboBoxServico = jComboBoxServico;
     }
+
+    public JTextField getTxtValor() {
+        return txtValor;
+    }
+
+    public void setTxtValor(JTextField txtValor) {
+        this.txtValor = txtValor;
+    }
+    
 }
