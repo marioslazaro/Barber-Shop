@@ -1,12 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Controller;
 
 import Controller.Helper.LoginHelper;
+import Model.DAO.UsuarioDAO;
 import Model.Usuario;
 import View.Login;
+import View.MenuPrincipal;
 
 /**
  *
@@ -25,6 +24,20 @@ public class LoginController {
         
         //Pegar um Usuario da View
         Usuario usuario = helper.obterModelo();
+        
+        //Pesquisa Usuario no Banco
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        Usuario usuarioAutenticado = usuarioDAO.selectPorNomeESenha(usuario);
+        
+        if(usuarioAutenticado != null){
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.setVisible(true);
+            this.view.dispose();
+        } else{
+             view.exibeMensagem("Usuario ou senha invalados");
+                }
+        
+       
   
     }
     public void fizTarefa(){
@@ -32,4 +45,6 @@ public class LoginController {
         
         this.view.exibeMensagem("Executei o fiz tarefa");
     }
+    
+    
 }
