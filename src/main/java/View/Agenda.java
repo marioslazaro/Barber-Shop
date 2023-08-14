@@ -6,6 +6,7 @@ package View;
 
 import Controller.AgendaController;
 import Model.DAO.Banco;
+import javax.swing.JComboBox;
 import javax.swing.JTable;
 
 /**
@@ -44,8 +45,8 @@ public class Agenda extends javax.swing.JFrame {
         lblData = new javax.swing.JLabel();
         lblValor = new javax.swing.JLabel();
         lblHora = new javax.swing.JLabel();
-        ComboBoxCliente = new javax.swing.JComboBox<>();
-        ComboBoxService = new javax.swing.JComboBox<>();
+        JComboBoxCliente = new javax.swing.JComboBox<>();
+        JComboBoxServico = new javax.swing.JComboBox<>();
         txtValor = new javax.swing.JTextField();
         txtData = new javax.swing.JTextField();
         txtHora = new javax.swing.JTextField();
@@ -100,13 +101,11 @@ public class Agenda extends javax.swing.JFrame {
         lblHora.setText("Hora:");
         getContentPane().add(lblHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
 
-        ComboBoxCliente.setBackground(new java.awt.Color(255, 255, 255));
-        ComboBoxCliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(ComboBoxCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 270, -1));
+        JComboBoxCliente.setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(JComboBoxCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 270, -1));
 
-        ComboBoxService.setBackground(new java.awt.Color(255, 255, 255));
-        ComboBoxService.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(ComboBoxService, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 270, -1));
+        JComboBoxServico.setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(JComboBoxServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 270, -1));
         getContentPane().add(txtValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 270, -1));
         getContentPane().add(txtData, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 270, -1));
         getContentPane().add(txtHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 270, -1));
@@ -203,8 +202,8 @@ public class Agenda extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> ComboBoxCliente;
-    private javax.swing.JComboBox<String> ComboBoxService;
+    private javax.swing.JComboBox<String> JComboBoxCliente;
+    private javax.swing.JComboBox<String> JComboBoxServico;
     private javax.swing.JScrollPane ScrollObs;
     private javax.swing.JToggleButton btnAgendar;
     private javax.swing.JLabel jLabel1;
@@ -229,6 +228,8 @@ public class Agenda extends javax.swing.JFrame {
 
     private void iniciar() {
         this.controller.atualizaTabela();
+        this.controller.atualizaCliente();
+        this.controller.atualizaServico();
         
     }
 
@@ -239,6 +240,20 @@ public class Agenda extends javax.swing.JFrame {
     public void setTableAgendamentos(JTable tableAgendamentos) {
         this.tableAgendamentos = tableAgendamentos;
     }
-    
-    
+
+      public JComboBox<String> getJComboBoxCliente() {
+        return JComboBoxCliente;
+    }
+
+    public void setJComboBoxCliente(JComboBox<String> JComboBoxCliente) {
+        this.JComboBoxCliente = JComboBoxCliente;
+    }
+
+    public JComboBox<String> getjComboBoxServico() {
+        return JComboBoxServico;
+    }
+
+    public void setjComboBoxServico(JComboBox<String> jComboBoxServico) {
+        this.JComboBoxServico = jComboBoxServico;
+    }
 }
