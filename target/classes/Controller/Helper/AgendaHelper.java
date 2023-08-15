@@ -12,11 +12,12 @@ import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 
+
 /**
  *
  * @author xbaco
  */
-public class AgendaHelper {
+public class AgendaHelper implements IHelper {
     
     private final Agenda view;
 
@@ -44,6 +45,11 @@ public class AgendaHelper {
             
         }
     }
+    
+     public Cliente obterCliente() {
+        return (Cliente)view.getJComboBoxCliente().getSelectedItem();
+        
+    }
 
      public void preencherClientes(ArrayList<Cliente> clientes) {
 
@@ -68,6 +74,8 @@ public class AgendaHelper {
                
     }
 
+     
+   
     public Servico obterServico() {
         return (Servico)view.getjComboBoxServico().getSelectedItem();
         
@@ -77,6 +85,34 @@ public class AgendaHelper {
         
         view.getTxtValor().setText(valor+"");
     }
+
+    @Override
+    public Agendamento obterModelo() {
+        String idString = view.getTxtBoxId().getText();
+        int id = Integer.parseInt(idString);
+        Cliente cliente = obterCliente();
+        Servico servico = obterServico();
+        String valorString = view.getTxtValor().getText();
+        float valor = Float.parseFloat(valorString);
+        String data = view.getTextFormatedData().getText();
+        String hora = view.getTextFormatedHora().getText();   
+        String dataHora = data + " " + hora;
+        String observacao = view.getTextObservacao().getText();
+        
+        Agendamento agendamento = new Agendamento(id, cliente, servico, valor, dataHora, observacao);
+        
+        return agendamento;
+    }
+
+    @Override
+    public void limparTela() {
+        view.getTxtBoxId().setText("0");
+        view.getTextFormatedHora().setText("");
+        view.getTextFormatedData().setText("");
+        view.getTextObservacao().setText("");
+        
+    }
+    
 
     
 }

@@ -12,7 +12,7 @@ import View.Login;
  *
  * @author xbaco
  */
-public class LoginHelper {
+public class LoginHelper implements IHelper{
     private final Login view;
 
     public LoginHelper(Login view) {
@@ -39,6 +39,8 @@ public class LoginHelper {
         view.getTxtUser().setText("");
         view.getTxtPassword().setText("");
     }
+    
+    
     
 }
     

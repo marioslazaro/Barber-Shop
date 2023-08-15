@@ -21,7 +21,7 @@ public class Agendamento {
     private Servico servico;
     private float valor;
     private Date data;
-    private String obersavacao;
+    private String observacao;
 
     public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data) {
         this.id = id;
@@ -33,6 +33,11 @@ public class Agendamento {
         } catch (ParseException ex) {
             Logger.getLogger(Agendamento.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data, String observacao) {
+       this(id, cliente, servico, valor, data); 
+       this.observacao = observacao;
     }
 
     public int getId() {
@@ -86,11 +91,11 @@ public class Agendamento {
     }
 
     public String getObersavacao() {
-        return obersavacao;
+        return observacao;
     }
 
-    public void setObersavacao(String obersavacao) {
-        this.obersavacao = obersavacao;
+    public void setObersavacao(String observacao) {
+        this.observacao = observacao;
     }
     
     
